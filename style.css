@@ -1,10 +1,16 @@
 /* nejsme vcerejsi, pouzivame moderni box model */
-html { box-sizing: border-box; }
-*, :after, :before { box-sizing: inherit; }
+html {
+  box-sizing: border-box;
+}
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
 
 body {
-	font-family: sans-serif;
-	font-size: 14px;
+  font-family: sans-serif;
+  font-size: 14px;
 }
 
 /* ---------------------------------------------------- */
@@ -15,3 +21,37 @@ Mobil   0 - 539px
 Tablet  540px - 959px (čti jako 540px a víc)
 PC      960px a víc
 */
+
+.card {
+  margin: 0 10px 10px 10px;
+  text-align: center;
+  border: 1px solid #c7c7c7;
+  box-shadow: 2px 3px 2px rgb(0, 0, 0, 0.05);
+}
+.card img {
+  border-radius: 50%;
+  padding: 10px;
+}
+.text p {
+  padding: 0 5px;
+}
+@media screen and (min-width: 540px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card {
+    flex-basis: calc(100% / 2 - 20px);
+    display: flex; /*ked tu pridam flex tak sa porusi kruhovy tvar fotky*/
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .container {
+    flex-wrap: nowrap; /*takto zrusit?*/
+  }
+  .card {
+    flex-basis: 25%;
+    display: block;
+  }
+}

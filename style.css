@@ -32,9 +32,11 @@ PC      960px a víc
   border-radius: 50%;
   padding: 10px;
 }
+.text h2,
 .text p {
   padding: 0 5px;
 }
+
 @media screen and (min-width: 540px) {
   .container {
     display: flex;
@@ -42,13 +44,15 @@ PC      960px a víc
   }
   .card {
     flex-basis: calc(100% / 2 - 20px);
-    display: flex; /*ked tu pridam flex tak sa porusi kruhovy tvar fotky*/
+    /* flex-grow: 1; */
+    /* flex-shrink: 0; */
+    display: flex; /*ked tu pridam flex tak sa porusi kruhovy tvar fotky preto na img musim pridat dalsie div*/
   }
 }
 
 @media screen and (min-width: 960px) {
   .container {
-    flex-wrap: nowrap; /*takto zrusit?*/
+    flex-wrap: nowrap;
   }
   .card {
     flex-basis: 25%;

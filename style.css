@@ -21,11 +21,14 @@ Mobil   0 - 539px
 Tablet  540px - 959px (čti jako 540px a víc)
 PC      960px a víc
 */
-
+h1 {
+  text-align: center;
+}
 .card {
   margin: 0 10px 10px 10px;
   text-align: center;
   border: 1px solid #c7c7c7;
+  border-radius: 5px;
   box-shadow: 2px 3px 2px rgb(0, 0, 0, 0.05);
 }
 .card img {
@@ -43,10 +46,12 @@ PC      960px a víc
     flex-wrap: wrap;
   }
   .card {
-    flex-basis: calc(100% / 2 - 20px);
-    /* flex-grow: 1; */
-    /* flex-shrink: 0; */
-    display: flex; /*ked tu pridam flex tak sa porusi kruhovy tvar fotky preto na img musim pridat dalsie div*/
+    flex: 1 1 calc(100% / 2 - 20px);
+    display: flex;
+  }
+  .card img {
+    width: 100px;
+    padding-left: 5px;
   }
 }
 
